@@ -4,8 +4,6 @@
 - Nom de la catégorie (théorème, proposition, lemme, definition, exemple, **reference historique wikipedia** etc.) inclus dans le bloc.
 - Facilement référenciable d'un cours à l'autre.
 
-
-
 ## Organisation
 
 - Page cours
@@ -22,9 +20,9 @@
 
 ## Features
 
-- [ ]  Parser qui génère un paquet Anki à partir du cours ou d'un chapitre directement.
+- [ ] Parser qui génère un paquet Anki à partir du cours ou d'un chapitre directement.
 - [ ] Démonstration divisée en idées principales pour mieux se souvenir.
-- [ ] quizz apres chaaque cours
+- [ ] Quizz apres chaque cours
 - [ ] Ajouter des citations au début de chaque chapitre.
 
 ## Inspiration
