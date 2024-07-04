@@ -1,0 +1,29 @@
+.theorem {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Takes up the full width of the container */
+  max-width: 400px; /* Limits the maximum width of the theorem */
+}
+
+.theorem-header {
+  display: flex;
+  align-items: center;
+}
+
+.theorem-icon img {
+  width: 5vw; /* Sets the width relative to the viewport width */
+  height: auto; /* Maintains the aspect ratio of the image */
+  margin-right: 2vw; /* Adds some space between the icon and the title */
+}
+
+.theorem-title p {
+  margin: 0;
+}
+
+.theorem-content {
+  background-color: lightblue;
+}
+
+.theorem-header {
+  background-color: lightcoral;
+}

@@ -28,8 +28,9 @@
 - [ ] Ajouter des citations au début de chaque chapitre.
 
 ## Inspiration
-https://cpge-paradise.com/MP4MathBook.php
-maths-france.fr
-http://alain.troesch.free.fr/
-http://ddmaths.free.fr/index.html
+- https://cpge-paradise.com/MP4MathBook.php
+- maths-france.fr
+- http://alain.troesch.free.fr/
+- http://ddmaths.free.fr/index.html
+- https://inventaire.iledefrance.fr/dossier/IA75000464
 
