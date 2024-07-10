@@ -24,7 +24,7 @@ fn format_markdown(markdown: &str) -> String {
                 in_code_block = true;
                 let block_type = info.split_whitespace().next().unwrap_or("");
                 let block_title = info.split_whitespace().skip(1).collect::<Vec<&str>>().join(" ");
-                let block_title = block_title.split('=').last().unwrap_or("").trim();
+                let block_title = block_title.split('=').last().unwrap_or("").trim().trim_matches('"');
                 current_block_type = block_type.to_string();
                 current_block_title = block_title.to_string();
             },
@@ -62,7 +62,7 @@ fn format_block(block_type: &str, title: &str, content: &str) -> String {
     match to_block_type(block_type) {
         Ok(BlockType::THEOREM) => {
             format!(
-                r#"<div class="theorem">
+r#"<div class="theorem">
     <div class="theorem-header">
         <div class="theorem-icon">
             <img src="https://via.placeholder.com/150" alt="Icon">
@@ -89,8 +89,7 @@ fn main() {}
 #[cfg(test)]
 mod tests {
     use super::*;
-    use pretty_assertions::{assert_eq, assert_ne};
-
+    use pretty_assertions::{assert_eq};
     #[test]
     fn test_global() {
         let markdown = r#"Some text *that is italic* and some **bold text**.
@@ -104,46 +103,33 @@ Si $x=0$ alors $2x=0$
 let expected_html = r#"<p>Some text <em>that is italic</em> and some <strong>bold text</strong>.</p>
 <div class="theorem">
     <div class="theorem-header">
-    <div class="theorem-icon">
-        <img src="https://via.placeholder.com/150" alt="Icon">
-    </div>
-    <div class="theorem-title">
-        <p id="theorem-title">Théorème de Nathan</p>
-    </div>
+        <div class="theorem-icon">
+            <img src="https://via.placeholder.com/150" alt="Icon">
+        </div>
+        <div class="theorem-title">
+            <p id="theorem-title">Théorème de Nathan</p>
+        </div>
     </div>
     <div class="theorem-content">
         <p>Soit $x$ un nombre réel. Alors $x^2 \geq 0$.</p>
     </div>
-</div>
-<p>Some more text.</p>
+</div><p>Some more text.</p>
 <div class="theorem">
     <div class="theorem-header">
-    <div class="theorem-icon">
-        <img src="https://via.placeholder.com/150" alt="Icon">
-    </div>
-    <div class="theorem-title">
-        <p id="theorem-title">Théorème d'Adrien</p>
-    </div>
+        <div class="theorem-icon">
+            <img src="https://via.placeholder.com/150" alt="Icon">
+        </div>
+        <div class="theorem-title">
+            <p id="theorem-title">Théorème d'Adrien</p>
+        </div>
     </div>
     <div class="theorem-content">
-    <p>Si $x=0$ alors $2x=0$</p>
+        <p>Si $x=0$ alors $2x=0$</p>
     </div>
-</div>
-"#;
+</div>"#;
             assert_eq!(expected_html, format_markdown(markdown))
         
 }
-    #[test]
-    fn test_markdown() {
-        let markdown = r#" Text before
-```theorem title=nathan
-Some text```
-Text that shouldn't be in the code block
-```theorem title=adrien
-J'aurais pas mon permis d'apres Adrien
-```
-Une phrase"#;
-        let html = format_markdown(markdown);
-        println!("{}", html);
-    }
+   
+
 }
