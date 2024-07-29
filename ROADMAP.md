@@ -19,10 +19,11 @@
   - ...
 - **Exercices**
   - Idem
-
+## TODO
+- [ ] Passer de handelbars à [tera](https://github.com/Keats/tera)
 ## Features
 
-- [ ]  Parser qui génère un paquet Anki à partir du cours ou d'un chapitre directement.
+- [ ] Parser qui génère un paquet Anki à partir du cours ou d'un chapitre directement.
 - [ ] Démonstration divisée en idées principales pour mieux se souvenir.
 - [ ] quizz apres chaaque cours
 - [ ] Ajouter des citations au début de chaque chapitre.
