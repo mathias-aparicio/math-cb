@@ -4,8 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-askama = "0.12.1"
 pretty_assertions = "1.4.0"
 pulldown-cmark = "0.11.0"
 regex = "1.10.5"
+rocket = "0.5.1"
+rocket_dyn_templates = "0.2.0"
 serde_json = "1.0.117"
+tera = "1.20.0"

@@ -1,11 +1,11 @@
-use std::{fs::File, io::Write, path::{self, Path}};
-
+use std::path::Path;
 use pulldown_cmark::{html, Parser, Event, Tag, TagEnd, Options, CodeBlockKind};
-use askama::{Error, Template}; // bring trait in scope
 
 /// Convert a Markdown file to String, takes a path in any form
-fn read_markdown<P: AsRef<Path>>(path: P) -> String {
-    todo!();
+pub fn render_markdown<P: AsRef<Path>>(path: P) -> String {
+    let path = path.as_ref();
+    let markdown = std::fs::read_to_string(path).expect("Failed to read file");
+    format_markdown(&markdown)
 }
 enum BlockType {
     THEOREM,
@@ -16,7 +16,7 @@ fn format_markdown(markdown: &str) -> String {
     let mut options = Options::empty();
     options.insert(Options::ENABLE_STRIKETHROUGH);
     options.insert(Options::ENABLE_TABLES);
-    
+
     let parser = Parser::new_ext(markdown, options);
     let mut html_output = String::new();
     let mut in_code_block = false;
@@ -90,19 +90,6 @@ r#"<div class="theorem">
     }
 }
 
-    #[derive(Template)]
-    #[template(path = "template.html")]
-    struct PageTemplate<'a> {
-        content: &'a str,
-    }
-/// Render the Askama template
-pub fn render_page(markdown: &str) -> Result<String, Error>{
-    // Instantiate the template
-    let content = format_markdown(&markdown);
-    let template = PageTemplate {content: &content};
-    template.render()
-}
-
 
 #[cfg(test)]
 mod tests {
@@ -111,7 +98,7 @@ mod tests {
     #[test]
     fn test_format_markdown() {
         let markdown = r#"Some text *that is italic* and some **bold text**.
-```theorem title="Théorème de Nathan" 
+```theorem title="Théorème de Nathan"
 Soit $x$ un nombre réel. Alors $x^2 \geq 0$.
 ```
 Some more text.
@@ -132,7 +119,7 @@ let expected_html = r#"<p>Some text <em>that is italic</em> and some <strong>bol
         <p>Soit $x$ un nombre réel. Alors $x^2 \geq 0$.</p>
     </div>
 </div><p>Some more text.</p>
-<div class="theorem"> 
+<div class="theorem">
     <div class="theorem-header">
         <div class="theorem-icon">
             <img src="https://via.placeholder.com/150" alt="Icon">
@@ -146,8 +133,8 @@ let expected_html = r#"<p>Some text <em>that is italic</em> and some <strong>bol
     </div>
 </div>"#;
             assert_eq!(expected_html, format_markdown(markdown))
-        
+
 }
-    
+
 
 }
