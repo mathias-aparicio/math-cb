@@ -22,7 +22,7 @@
 
 - [ ] Parser qui génère un paquet Anki à partir du cours ou d'un chapitre directement.
 - [ ] Démonstration divisée en idées principales pour mieux se souvenir.
-- [ ] quizz apres chaaque cours
+- [ ] Quizz apres chaque cours
 - [ ] Ajouter des citations au début de chaque chapitre.
 - [ ] Annuaire de méthode la plus précise possible avec une hiérarchie sous la forme d'un graph
       Diagonaliser des matrices complexes
