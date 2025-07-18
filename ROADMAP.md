@@ -1,13 +1,14 @@
-## Bloc de maths typographique
+## Organisation
+
+- Page cours
+- Page exercice
+
+## Typst 
 
 - Théorème numéroté automatiquement.
 - Nom de la catégorie (théorème, proposition, lemme, definition, exemple, **reference historique wikipedia** etc.) inclus dans le bloc.
 - Facilement référenciable d'un cours à l'autre.
 
-## Organisation
-
-- Page cours
-- Page exercice
 
 ### Sommaire
 
