@@ -1,5 +1,5 @@
 ## Backend 
-- [ ] Write a start function that yields a Server so that I can test each route 
+- [x] Write a start function that yields a Server so that I can test each route 
 - [ ] Test that the following routes respond 200 so that the backend structure is set up 
   - /cours 
   - /exercies 
