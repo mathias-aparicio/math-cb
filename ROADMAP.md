@@ -1,44 +1,55 @@
-## Organisation
+# TODO math-cb
 
-- Page cours
-- Page exercice
+├── backend
+└── Frontend
+    ├── typst
+    │   ├── cours
+    │   │   ├── ensemble.typ
+    │   │   └── trigonometrie.typ
+    │   └── exercices
+    │       ├── ensemble.typ
+    │       └── trigonometrie.typ
+    └── html
+        ├── cours
+        │   ├── ensemble.html
+        │   └── trigonometrie.html
+        └── exercices
+            ├── ensemble.html
+            └── trigonometrie.html
 
-## Typst 
-
-- Théorème numéroté automatiquement.
-- Nom de la catégorie (théorème, proposition, lemme, definition, exemple, **reference historique wikipedia** etc.) inclus dans le bloc.
-- Facilement référenciable d'un cours à l'autre.
-
-
-### Sommaire
-
-- **Cours**
-  - Rudiments de logique
-  - Ensemble
-  - ...
-- **Exercices**
-  - Idem
-
-## Features
-
-- [ ] Parser qui génère un paquet Anki à partir du cours ou d'un chapitre directement.
-- [ ] Démonstration divisée en idées principales pour mieux se souvenir.
-- [ ] quizz apres chaaque cours
-- [ ] Ajouter des citations au début de chaque chapitre.
-- [ ] Annuaire de méthode la plus précise possible avec une hiérarchie sous la forme d'un graph
-      Diagonaliser des matrices complexes
-      └── Valeures propres - vecteurs propres - matrice de passage
-      └── valeures propres
-      └── polynomes caractéristiques
-
-- [ ] Chaque exercice est lié plusieurs méthode
-- [ ] Diviser la correction de l'exercice en applicaiton de chaque méthode en la citant avec un hyper lien vers la méthode
-- [ ] Tableau de bord de maitrise des méthodes via des quizz d'abord à la maniere d'Anki, puis avec vérification formelle, les exercices su sont ajouté au tableau de bord et pour chaque méthode il y a une jauge de maitrise
-- [ ] Apres avoir réalisé un exercice il est marqué comme su mais son niveau de maitrise décroit avec le temps, la répétition de l'exercice fait que sa maitrise descend moins vite
+- [x] Script qui compile les sources typst en html
+- [ ] Page cours et exercice avec un sommaire depuis les fichiers présents dans les dossiers respectifs
+- [ ] Header navbar (Cours, Exercice, Méthodes, À propos, Github)
+- [ ] Style d'une page typst
+  - [ ] Bloc : théorème, définition, lemme, référence historique (theorion)
+    - [ ] Doivent être numéroté
+    - [ ] Doivent être facilement référencable entre fichiers différents (théorème de trigonométrie dans ensemble)
+  - [ ] Démonstration divisée en idée principale
+  - [ ] Template
+- [ ] Méthode de solution apparaissant dans une classe d'exercice
+- [ ] Méthode classée par chapitre
+- [ ] Méthode a un numéro et un indice et un chapitre associé
+- [ ] Annuaire de méthodes sous forme d'arbre
+    Diagonaliser une matrice
+    ├── Trouver valeurs propres
+    ├── Trouver vecteurs propres
+    ├── Matrice de passage
+- [ ] Associer les exercices aux méthodes
+- [ ] Dans les corrections des exercices lier chaque étape de la solution à une méthode
+  - [ ] Hyperlien vers la méthode spécifique utilisée dans l'annuaire
+- [ ] Quizz à fin de chaque chapitre
+  - [ ] énoncé théorème et definition, idées principales des démonstration
+- [ ] Tableau de bord ou chaque méthode de l'annuaire est listée avec une jauge de maitrise
+  - [ ] Maitrise diminue quand un exercice est raté et augmente le cas contraire
+  - [ ] Décroit avec le temps
+  - [ ] Système à la Anki répétition esspacé
+  - [ ] Exercice à faire aparaissent, les refaire augmente la jauge de maitrise
+- [ ] Export d'un cours en paquet anki avec theoreme, proposition, definition, démonstration
+- [ ] Point historique au début d'un chapitre sur un mathématicien ou une mathématicienne  
 
 ## Inspiration
 
 <https://cpge-paradise.com/MP4MathBook.php>
-maths-france.fr
+<https://maths-france.fr>
 <http://alain.troesch.free.fr/>
 <http://ddmaths.free.fr/index.html>
