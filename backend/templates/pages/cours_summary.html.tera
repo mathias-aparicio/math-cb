@@ -1,0 +1,6 @@
+<h1>Liste des Cours</h1>
+<ul>
+    {% for course in courses %}
+        <li><a href="/cours/{{ course.file_name }}">{{ course.title }}</a></li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+nav {
+    background-color: orange;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.github-link {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.github-link svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    vertical-align: middle;
+}
+
+main {
+    padding: 1rem;
+}

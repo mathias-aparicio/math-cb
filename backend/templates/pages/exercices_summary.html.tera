@@ -1,0 +1,6 @@
+<h1>Liste des Exercices</h1>
+<ul>
+    {% for exercice in exercices %}
+        <li><a href="/exercices/{{ exercice.file_name }}">{{ exercice.title }}</a></li>
+    {% endfor %}
+</ul>
