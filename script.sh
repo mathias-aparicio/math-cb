@@ -9,6 +9,7 @@ fi
 categories=("exercices" "cours")
 
 for category in "${categories[@]}"; do
+  rm -f "frontend/html/$category"/*.html
   for file in "frontend/typst/$category"/*.typ; do
     if [ -f "$file" ]; then
       filename=$(basename "$file" .typ)

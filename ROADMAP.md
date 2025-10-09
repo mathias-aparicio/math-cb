@@ -1,57 +1,59 @@
-# TODO math-cb
+# Roadmap math-cb
 
-├── backend
-└── Frontend
-    ├── typst
-    │   ├── cours
-    │   │   ├── ensemble.typ
-    │   │   └── trigonometrie.typ
-    │   └── exercices
-    │       ├── ensemble.typ
-    │       └── trigonometrie.typ
-    └── html
-        ├── cours
-        │   ├── ensemble.html
-        │   └── trigonometrie.html
-        └── exercices
-            ├── ensemble.html
-            └── trigonometrie.html
+## Produit minimal viable
 
-- [x] Script qui compile les sources typst en html
-- [x] Page cours et exercice avec un sommaire depuis les fichiers présents dans les dossiers respectifs
-- [x] Header navbar (Cours, Exercice, Méthodes, À propos, Github)
-- [ ] Style d'une page typst
-  - [ ] Bloc : théorème, définition, lemme, référence historique (theorion)
-    - [ ] Doivent être numéroté
-    - [ ] Doivent être facilement référencable entre fichiers différents (théorème de trigonométrie dans ensemble)
-  - [ ] Démonstration divisée en idée principale
-  - [ ] Template
-- [ ] Méthode de solution apparaissant dans une classe d'exercice
-- [ ] Méthode classée par chapitre
-- [ ] Méthode a un numéro et un indice et un chapitre associé
-- [ ] Annuaire de méthodes sous forme d'arbre
-    Diagonaliser une matrice
-    ├── Trouver valeurs propres
-    ├── Trouver vecteurs propres
-    ├── Matrice de passage
-- [ ] Associer les exercices aux méthodes
-- [ ] Dans les corrections des exercices lier chaque étape de la solution à une méthode
-  - [ ] Hyperlien vers la méthode spécifique utilisée dans l'annuaire
-- [ ] Quiz à fin de chaque chapitre
-  - [ ] énoncé théorème et définition, idées principales des démonstration
-- [ ] Tableau de bord ou chaque méthode de l'annuaire est listée avec une jauge de maitrise
-  - [ ] Maitrise diminue quand un exercice est raté et augmente le cas contraire
-  - [ ] Décroit avec le temps
-  - [ ] Système à la Anki répétition espacé
-  - [ ] Exercice à faire apparaissent, les refaire augmente la jauge de maitrise
-- [ ] Export d'un cours en paquet anki avec théorème, proposition, définition, démonstration
-- [ ] Point historique au début d'un chapitre sur un mathématicien ou une mathématicienne  
-- [ ] Cache pour augmenter les performances
-  ex: quand on accède a cours/ensemble une opération de lecture sur le disque du serveur est faite, avec un cache on éviterai ça
+- [x] Compilation des sources Typst en HTML
+- [x] Pages sommaires pour les cours et exercices
+- [x] Barre de navigation (Cours, Exercices, Méthodes, À propos, Github)
+- [ ] Deployer
+- [ ] Github Action pour recompiler les sources typst en html à chaque PR
 
-## Inspiration
+## Contenu et Style
 
-<https://cpge-paradise.com/MP4MathBook.php>
-<https://maths-france.fr>
-<http://alain.troesch.free.fr/>
-<http://ddmaths.free.fr/index.html>
+- [ ] Blocs numérotés et référençables (théorème, définition, lemme, etc.)
+  - [ ] Références inter-fichiers (ex: théorème de trigo dans un autre chapitre)
+- [ ] Structure pour les démonstrations (idée principale, étapes)
+- [ ] Création d'un template de base
+- [ ] Ajout de points historiques en début de chapitre
+
+## Annuaire des Méthodes
+
+- [ ] Créer un annuaire de méthodes structuré en arbre
+  - `Exemple : Diagonaliser une matrice -> Trouver valeurs propres -> ...`
+- [ ] Organiser les méthodes par chapitre
+- [ ] Identifier chaque méthode (numéro, indice, chapitre)
+- [ ] Une méthode est liée à plusieurs exercices
+- [ ] Un exercice est lié à plusieurs méthodes, et théorèmes
+  - [ ] Permettre d'activer/désactiver l'affichage de ces associations
+- [ ] Dans les corrections, lier chaque étape de la solution à la méthode correspondante
+- [ ] Inclure hyperlien vers les méthodes dans l'annuaire
+
+## Apprentissage et Suivi
+
+- [ ] Quiz de fin de chapitre (théorèmes, définitions, idées de démonstration)
+- [ ] Tableau de bord de maîtrise des méthodes
+  - [ ] Jauge de maîtrise par méthode (augmente/diminue avec les résultats aux exercices)
+  - [ ] Système de répétition espacée (type Anki)
+    - [ ] La maîtrise décroît avec le temps
+    - [ ] Suggestion d'exercices pour renforcer les points faibles
+
+## Annales
+
+- [ ] Section "Annales" avec des corrections utilisant uniquement les méthodes du site
+- [ ] Afficher un "degré de classicisme" pour chaque méthode (basé sur sa fréquence dans les annales)
+- [ ] Afficher pour chaque annales les méthodes requises et le niveau de maîtrise de l'utilisateur sur chacune
+
+## Exports et Intégrations
+
+- [ ] Bouton d'export pour les cours et exercices
+  - [ ] Sources Typst
+  - [ ] PDF
+  - [ ] EPUB
+- [ ] Intégration Anki
+  - [ ] Export de cours en paquets Anki (théorèmes, définitions, etc.)
+  - [ ] Synchronisation avec l'API Anki pour refléter la maîtrise sur le tableau de bord
+
+## Backend
+
+- [ ] Mise en cache des pages pour améliorer les performances
+  `Diminue les accès disque sur le server`
