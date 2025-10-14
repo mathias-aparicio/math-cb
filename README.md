@@ -11,6 +11,8 @@ Une fois `typst` installé et [familiarisé avec le langage](https://typst.app/d
 
 Pour voir le rendu d'un fichier `typst`, sur une page web. Les modifications apparaitront une fois enregistrer sur le fichier source.
 
-   ```sh
-   typst watch nom_du_cours.typ --format html --features html
-   ```
+```sh
+typst watch frontend/typst/cours/complexe.typ frontend/html/cours/complexe.html --format html --features html --open
+```
+
+Pour l'instant uniquement [ces fonctionalitées](https://github.com/typst/typst/issues/5512) sont supportées pour l'export html.

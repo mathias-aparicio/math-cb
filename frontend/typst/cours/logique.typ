@@ -32,6 +32,7 @@ Deux propositions ayant la même valeur de vérité sont logiquement équivalent
 Les connecteurs logiques ($not, and, or, #sym.arrow.double, #sym.arrow.l.r.double$) servent à construire de nouvelles propositions. 
 
 Soient P et Q deux propositions. 
+
 === Négation 
 
 === Conjonction 

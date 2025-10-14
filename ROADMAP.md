@@ -5,8 +5,8 @@
 - [x] Compilation des sources Typst en HTML
 - [x] Pages sommaires pour les cours et exercices
 - [x] Barre de navigation (Cours, Exercices, Méthodes, À propos, Github)
-- [ ] Deployer
-- [ ] Github Action pour recompiler les sources typst en html à chaque PR
+- [ ] Déployer
+- [ ] Github Action pour recompiler les sources Typst en html à chaque PR
 
 ## Contenu et Style
 
@@ -39,7 +39,7 @@
 
 ## Annales
 
-- [ ] Section "Annales" avec des corrections utilisant uniquement les méthodes du site
+- [ ] Section Annales avec des corrections utilisant uniquement les méthodes
 - [ ] Afficher un "degré de classicisme" pour chaque méthode (basé sur sa fréquence dans les annales)
 - [ ] Afficher pour chaque annales les méthodes requises et le niveau de maîtrise de l'utilisateur sur chacune
 
